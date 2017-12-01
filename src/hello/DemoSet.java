@@ -51,7 +51,17 @@ public class DemoSet {
 		for (Student student : array2) {
 			System.out.println(student);
 		}
-
+		System.out.println("----------------");
+		
+		Student[] array3 = new Student[list2.size()];
+		for (int i = 0; i < list2.size(); i++) {
+			array3[i] = list2.get(i);
+		}
+		for (Student student : array3) {
+			System.out.println(student);
+		}
+		
+		/** setµÄ±éÀú */
 		// for (Student student : set) {
 		// System.out.println(student);
 		// }

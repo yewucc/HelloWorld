@@ -1,15 +1,18 @@
 package hello;
 
 public class ExceptionDemo {
-	public static void main(String[] args)  {
+	public static void main(String[] args) {
 		int num1 = 3;
 		int num2 = 0;
 		System.out.println(div1(num1, num2));
 		try {
 			System.out.println(div2(num1, num2));
-		} catch (Exception e) {
+		}  catch (ArithmeticException e) {
 			System.out.println(e);
-			System.out.println("也出错啦~");
+			System.out.println("出Arithmetic错啦~");
+		}catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println(e);
+			System.out.println("出ArrayIndexOutOfBounds错啦~");
 		}
 	}
 
@@ -21,13 +24,16 @@ public class ExceptionDemo {
 		} catch (Exception e) {
 			System.out.println(e);
 			System.out.println("出错啦~");
-		} finally {
+		}finally {
 			System.out.println("~~~~~~~~");
 		}
 		return result;
 	}
-	
-	public static int div2(int num1, int num2) throws Exception {
+
+	public static int div2(int num1, int num2) throws ArithmeticException,
+	ArrayIndexOutOfBoundsException {
+		int[] a = new int[2];
+		a[2] = 5;
 		return num1 / num2;
 	}
 }

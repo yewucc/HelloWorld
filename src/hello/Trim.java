@@ -3,6 +3,18 @@ package hello;
 import org.junit.Test;
 
 public class Trim {
+	@Test
+	public void testTrim() {
+		String str = "---java android--";
+		String str1 = "-----";
+		String str2 = "-";
+		String str3 = null;
+		System.out.println(trim(str));
+		System.out.println(trim(str1));
+		System.out.println(trim(str2));
+		System.out.println(trim(str3));
+	}
+	
 	public  String trim(String str){
 		if(str == null){
 			return null;
@@ -16,18 +28,6 @@ public class Trim {
 			endIndex --;
 		}
 		return str.substring(beginIndex, endIndex + 1);
-	}
-	
-	@Test
-	public void testTrim() {
-		String str = "---java android--";
-		String str1 = "-----";
-		String str2 = "-";
-		String str3 = null;
-		System.out.println(trim(str));
-		System.out.println(trim(str1));
-		System.out.println(trim(str2));
-		System.out.println(trim(str3));
 	}
 	
 	@Test
