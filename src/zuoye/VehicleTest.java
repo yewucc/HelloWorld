@@ -7,5 +7,6 @@ public class VehicleTest {
 		System.out.println("体积为：" + v.getSize() );
 		System.out.println("加速后速度" + v.speedUp(10.0));
 		System.out.println("减速后速度" + v.speedDown(15.0));
+		
 	}
 }
