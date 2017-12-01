@@ -1,4 +1,4 @@
-package zuoye;
+package zuoye1;
 
 public class Number {
 	private int num1;

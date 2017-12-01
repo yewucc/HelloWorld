@@ -1,4 +1,4 @@
-package zuoye;
+package zuoye1;
 
 public class VehicleTest {
 	public static void main(String[] args) {

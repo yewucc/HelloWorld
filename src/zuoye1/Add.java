@@ -1,4 +1,4 @@
-package zuoye;
+package zuoye1;
 
 public class Add {
 	public int add(int num1, int num2) {
