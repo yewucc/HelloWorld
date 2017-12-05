@@ -69,11 +69,11 @@ public class FirstTest {
 	/** 第五题：数组src从第srcPos项元素开始的length个元素拷贝到目标数组dest从destPos开始的length个元素 */
 	public static void arraycopy(Object[] src, int srcPos, Object[] dest, int destPos, int length) {
 		Object[] copy = new Object[length];
-		for (int i = srcPos - 1; i < srcPos + length - 1; i++) {
-			copy[i - srcPos + 1] = src[i];
+		for (int i = srcPos; i < srcPos + length; i++) {
+			copy[i - srcPos] = src[i];
 		}
 		for (int i = 0; i < copy.length; i++) {
-			dest[i + destPos - 1] = copy[i];
+			dest[i + destPos] = copy[i];
 		}
 	}
 
@@ -90,10 +90,12 @@ public class FirstTest {
 		// System.out.println(o);
 		// }
 		int i = 0;
-		for (i++; i++ < 10; i++)
-			;
+		i++;
+		while (i++ < 10) {
+			System.out.println(i);
+			i++;
+		}
 		System.out.println(++i);
-
 	}
 
 }

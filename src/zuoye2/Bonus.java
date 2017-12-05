@@ -16,7 +16,7 @@ public class Bonus {
 
 	private static double bonus(double profit) {
 		double donus = 0;
-		if (profit <= 10) {
+		if (profit > 0 && profit <= 10) {
 			donus = profit * 0.1;
 		} else if (profit > 10 && profit <= 20) {
 			donus = 1 + (profit - 10) * 0.075;

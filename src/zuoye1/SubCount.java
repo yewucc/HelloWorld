@@ -4,7 +4,9 @@ public class SubCount {
 	public static void main(String[] args) {
 		String str = "abkkcdkkefkkskk";
 		String key = "kk";
-		if(str.length() >= key.length()){
+		// System.out.println(str.length());
+		// System.out.println(str.substring(13, 15));
+		if (str.length() >= key.length()) {
 			int count = getSubCount(str, key);
 			System.out.println(count);
 		}
