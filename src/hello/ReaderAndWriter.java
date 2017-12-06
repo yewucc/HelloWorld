@@ -1,9 +1,13 @@
 package hello;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.Arrays;
@@ -86,5 +90,41 @@ public class ReaderAndWriter {
 				}
 			}
 		}
+	}
+
+	@Test
+	public void stream() {
+		InputStream input = null;
+		OutputStream output = null;
+		try {
+			input = new FileInputStream("tupian1.jpeg");
+			output = new FileOutputStream("tupian2.png");
+			byte[] buffer = new byte[1024];
+			int length = 0;
+			while ((length = input.read(buffer)) != -1) {
+				output.write(buffer, 0, length);
+				System.out.println(length);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (output != null) {
+				try {
+					output.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
 	}
 }

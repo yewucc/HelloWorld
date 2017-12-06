@@ -59,7 +59,8 @@ public class HelloTest {
 	// System.out.println(i);
 	// }
 	// }
-	//
+
+	/** √∞≈›≈≈–Ú **/
 	// @Test
 	// public void buttonSort(){
 	// int[] num={15,21,7,48,34};
@@ -77,6 +78,7 @@ public class HelloTest {
 	// }
 	// }
 
+	/** —°‘Ò≈≈–Ú **/
 	// @Test
 	// public void selectSort(){
 	// int[] num={15,21,7,48,34};

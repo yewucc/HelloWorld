@@ -1,7 +1,7 @@
 package hello;
 
 public class Singleton2 {
-	/** 懒汉式：以时间换空间 */
+	/** 单例模式（懒汉式）：以时间换空间 */
 	private static Singleton2 instance = null;
 
 	private Singleton2() {
