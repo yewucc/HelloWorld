@@ -51,8 +51,9 @@ public class ObjectStream {
 			input = new FileInputStream("person");
 			objectinput = new ObjectInputStream(input);
 			Object readObject = objectinput.readObject();
-			Person per = (Person) readObject;
-			System.out.println(per);
+			// Person per = (Person) readObject;
+			// System.out.println(per);
+			System.out.println(readObject);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

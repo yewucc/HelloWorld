@@ -10,6 +10,16 @@ public class Person implements Serializable {
 		super();
 	}
 
+	private Person(String name) {
+		super();
+		this.name = name;
+	}
+
+	public Person(Integer age) {
+		super();
+		this.age = age;
+	}
+
 	public Person(String name, Integer age) {
 		super();
 		this.name = name;
@@ -20,15 +30,16 @@ public class Person implements Serializable {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name, Integer age) {
 		this.name = name;
+		this.age = age;
 	}
 
 	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	private void setAge(Integer age) {
 		this.age = age;
 	}
 
